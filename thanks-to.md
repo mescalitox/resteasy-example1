@@ -48,7 +48,7 @@ toujours bug ! car 52 -> descente des versions de 3.1.0.Final -> 3.0.13.Final
 	*	url : [http://localhost:8080/resteasy-example1/employee/getAll]
 	
 #Json
-*	*	add
+*	add
 
 	*	url : [http://localhost:8080/resteasy-example1/employeeJson/add]
 	*	header : content-type : application/json
@@ -58,3 +58,8 @@ toujours bug ! car 52 -> descente des versions de 3.1.0.Final -> 3.0.13.Final
 ```	
 
 
+#server
+
+	test sur JBOSS wildfly 10 (jdk8) & tomcat 8 (jdk7)
+	si wildfly permet de passer les scope des dépendances resteasy en provided (présentes sur serveur...)
+	
