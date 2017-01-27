@@ -1,6 +1,6 @@
 #from 
 *	xml [http://www.journaldev.com/9189/resteasy-tutorial-eclipse-tomcat]
-* json [https://www.mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy]
+* 	json [https://www.mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy]
 
 #resteasy 
 	
@@ -22,3 +22,39 @@ java.lang.UnsupportedClassVersionError: org/jboss/resteasy/plugins/server/servle
 toujours bug ! car 52 -> descente des versions de 3.1.0.Final -> 3.0.13.Final
 
 #provider json avec jackson cf pom
+
+#test avec soapUI ou outildev firefox
+
+*	add
+
+	*	url : [http://localhost:8080/resteasy-example1/employee/add]
+	*	header : content-type : application/xml
+	*	body : 
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+	<id>1</id>
+	<name>Toto</name>
+	<salary>100.00</salary>
+</employee>
+```
+
+*	getDummy : 
+
+	*	url : [http://localhost:8080/resteasy-example1/employee/99/getDummy]
+
+*	getAll :
+ 
+	*	url : [http://localhost:8080/resteasy-example1/employee/getAll]
+	
+#Json
+*	*	add
+
+	*	url : [http://localhost:8080/resteasy-example1/employeeJson/add]
+	*	header : content-type : application/json
+	*	body : 
+```json
+	{"name":"Dummy","salary":8976.55,"id":1}
+```	
+
+
